@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @font-face {
+            font-family: 'Helvetica Neue';
+            src: url('HelveticaNeue.woff2') format('woff2'),
+                url('HelveticaNeue.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: 'Helvetica Neue';
+            src: url('HelveticaNeue-Medium.woff2') format('woff2'),
+                url('HelveticaNeue-Medium.woff') format('woff');
+            font-weight: 500;
+            font-style: normal;
+            font-display: swap;
+        }
+        @font-face {
+            font-family: 'Saol Display';
+            src: url('SaolDisplay-Regular.woff2') format('woff2'),
+                url('SaolDisplay-Regular.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+        }
+        html, body {
+            position: relative;
+            color: #1a1a1a;
+            background: #f4f4f4;
+            padding: 0;
+            margin: 0;
+            font-family: 'Saol Display';
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            overflow: hidden;
+        }
+
+        .wrapper {
+            height: 100vh;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .upper {
+            height: 10%;
+            width: 100%;
+        }
+
+        .middle {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 80%;
+            width: 100%;
+            font-size: 18vw;
+        }
+
+        .lower {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 10%;
+            width: 100%;
+            font-size: 1.4vw;
+            font-family: 'Helvetica Neue';
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="upper"></div>
+        <div class="middle">
+            <p id="load--bar">1</p>
+        </div>
+        <div class="lower">LOADING</div>
+    </div>
+
+<script>
+var i = 1;               
+
+function myLoop() {         
+  setTimeout(function() {  
+    document.getElementById('load--bar').innerHTML = '0'+i+'—100';
+    i++;                    
+    if (i < 15) {          
+      myLoop();             
+    }                     
+  }, 150)
+}
+
+myLoop();   
+</script>
+</body>
+</html>

@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        :root { 
+            --main-height: 160px;
+         }
+
+         @font-face {
+            font-family: 'Helvetica Neue';
+            src: url('HelveticaNeue.woff2') format('woff2'),
+                url('HelveticaNeue.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: 'Saol Display';
+            src: url('SaolDisplay-Regular.woff2') format('woff2'),
+                url('SaolDisplay-Regular.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        html, body {
+            position: relative;
+            background: #f9f4f0;
+            padding: 0;
+            margin: 0;
+            font-family: 'Saol Display';
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            overflow: hidden;
+        }
+
+        .container {
+            height: 100vh;
+            width: 100%;
+        }
+
+        .nav {
+            font-size: 24px;
+            display: flex;
+            font-family: 'Helvetica Neue';
+            text-transform: uppercase;
+            height: var(--main-height);
+            width: 100%;
+        }
+
+        .pre {
+            height: var(--main-height);
+            width: 100%;
+        }
+
+        .nav-wrapper {
+            height: 50px;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px;
+        }
+
+        .main {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+
+        }
+
+        .section {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            width: 100%;
+        }
+
+        .section-image {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            width: 100%;
+        }
+
+        .section-image:hover {
+            background-image: url("cafe_terrace_at_night.webp");
+            object-fit: none;
+        }
+
+        .sub-a {
+            height: 40%;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            font-size: 42px;
+            line-height: 35px;
+            text-transform: uppercase;
+        }
+
+        .sub-b {
+            height: 60%;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 340px;
+            color: #fe0002;
+        }
+
+        .year {
+            font-family: 'Helvetica Neue';
+            padding: 0;
+            margin: 0;
+            font-size: 1.4rem;
+        }
+
+        .image-wrapper {
+            position: absolute;
+            height: 100vh;
+            width: 100%;
+        }
+        .image-section {
+            height: 100vh;
+            width: 100%;
+            display: flex;
+            
+        }
+
+        .text-wrapper {
+        }
+
+        width: -webkit-calc(100% - 35px); //Chrome
+  width: -moz-calc(100% - 35px); //firefox
+  width: calc(100% - 35px);
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+<!--         <div class="nav">
+            <div class="nav-wrapper">
+                <svg height="30" viewBox="0 0 51 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g filter="url(#filter0_d_124_86)">
+                    <path d="M26.5 1C26.5 0.447715 26.0523 0 25.5 0C24.9477 0 24.5 0.447715 24.5 1L26.5 1ZM24.5 1L24.5 52H26.5L26.5 1L24.5 1Z" fill="black"/>
+                    </g>
+                    <line x1="43.7903" y1="10.4139" x2="8.41444" y2="44.3189" stroke="black" stroke-width="2" stroke-linecap="round"/>
+                    <line x1="42.6483" y1="45.0625" x2="8.00005" y2="10.4143" stroke="black" stroke-width="2" stroke-linecap="round"/>
+                    <line x1="1" y1="28" x2="50" y2="28" stroke="black" stroke-width="2" stroke-linecap="round"/>
+                    <defs>
+                    <filter id="filter0_d_124_86" x="20.5" y="0" width="10" height="60" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                    <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                    <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                    <feOffset dy="4"/>
+                    <feGaussianBlur stdDeviation="2"/>
+                    <feComposite in2="hardAlpha" operator="out"/>
+                    <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+                    <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_124_86"/>
+                    <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_124_86" result="shape"/>
+                    </filter>
+                    </defs>
+                    </svg>
+                    
+                ART Gallery
+    
+                <svg width="51" height="8" viewBox="0 0 51 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <line x1="1" y1="1" x2="50" y2="1" stroke="black" stroke-width="2" stroke-linecap="round"/>
+                    <line x1="20" y1="7" x2="50" y2="7" stroke="black" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+            </div>
+                
+        </div> -->
+        <main class="main">
+            <div class="section">
+                <div class="pre"></div>
+                <div class="pre-b">
+                    
+                </div>
+
+                <div class="sub-a">
+                    
+                    <div id="text-hover" class="text-wrapper">The <br> Night <br> Watch <br> <span class="year"></span></div></div>
+                <div class="sub-b"><div class="text-wrapper">2</div></div>
+            </div>
+            <div class="section">
+                <div class="sub-a">The <br> Kitchen <br> Maid</div>
+                <div class="sub-b">3</div>
+            </div>
+            <div class="section">
+                <div class="sub-a">The <br> Artist in <br> Studio</div>
+                <div class="sub-b">4</div>
+            </div>
+            <div class="section">
+                <div class="sub-a">Titus <br> As A <br> Monk</div>
+                <div class="sub-b">5</div>
+            </div>
+        </main>
+
+
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script>
+        const box = document.getElementById('box');
+        const hover = document.getElementById('box');
+        box.addEventListener('mouseover', function handleMouseOver() {
+        box.style.color = 'red';
+        });
+
+        box.addEventListener('mouseout', function handleMouseOut() {
+        box.style.color = 'black';
+        });
+
+
+
+       
+
+/*         var tl = gsap.timeline(); 
+        tl.to('.header-text', {
+            yoyo: true, 
+            repeat: -1,
+            repeatDelay: 2,
+            duration: 2,
+            yPercent: -100
+        }) */
+
+       
+
+        
+        
+    </script>
+    
+
+</body>
+</html>

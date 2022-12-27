@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        :root { 
+            --pseudo-height: 15%;
+         }
+         @font-face {
+            font-family: 'Helvetica Neue';
+            src: url('HelveticaNeue.woff2') format('woff2'),
+                url('HelveticaNeue.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: 'Helvetica Neue';
+            src: url('HelveticaNeue-Medium.woff2') format('woff2'),
+                url('HelveticaNeue-Medium.woff') format('woff');
+            font-weight: 500;
+            font-style: normal;
+            font-display: swap;
+        }
+        @font-face {
+            font-family: 'Saol Display';
+            src: url('SaolDisplay-Regular.woff2') format('woff2'),
+                url('SaolDisplay-Regular.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+        }
+        html, body {
+            position: relative;
+            background: #f4f4f4;
+            color: #000000;
+            padding: 0;
+            margin: 0;
+            font-family: 'Saol Display';
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            overflow: hidden;
+            cursor: url('Ellipse.png'),auto;
+        }
+        .wrapper {
+            display: flex;
+            height: 100vh;
+            width: 100%;
+        }
+
+        .section {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            width: 100%;
+            border-right: 1px solid rgb(197, 197, 197); 
+            
+    
+        }
+
+  
+
+        .section:nth-child(4) {
+            border: none;
+        }
+
+        .subgroup-a {
+            height: var(--pseudo-height);
+            width: 100%;
+        }
+
+        .subgroup-b {
+            height: -webkit-calc(100% - var(--pseudo-height)); 
+            height: -moz-calc(100% - var(--pseudo-height));
+            height: calc(100% - var(--pseudo-height));
+            
+            
+        }
+
+        .sect-a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 60%;
+            width: 100%;
+            font-size: 3.2vw;
+            line-height: 2.8vw;
+            text-transform: uppercase;
+            color: #000000;
+            
+            
+        }
+
+        .sect-b {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 40%;
+            width: 100%;
+            font-size: 16vw;
+            color: #000000;
+            
+        }
+
+        .nav-bar {
+            position: absolute;
+            height: 40px;
+            width: 100%;
+            display: flex;
+            font-family: 'Helvetica Neue';
+            font-size: 1.4vw;
+            font-weight: 400;
+            color: #f4f4f4;
+            
+        }
+
+        .nav-wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 100%;
+            width: 100%;
+            padding: 20px;
+            text-transform: uppercase;
+        }
+
+        .menu {
+            opacity: 0;
+            position: absolute;
+            display: flex;
+            height: 100vh;
+            width: 100%;
+            z-index: -1;
+            
+        }
+
+        .menu-a {
+            height: 100%;
+            width: 25%;
+            backdrop-filter: blur(6px);
+        }
+
+
+        .menu-b {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            width: 65%;
+            background: #1a1a1a;
+        }
+
+        .menu-c {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            height: 100%;
+            width: 10%;
+            background: #1a1a1a;
+        }
+
+        .menu-links {
+            color: #f4f4f4;
+            font-size:8.2vw;
+            text-transform: uppercase;
+            padding: 0;
+            margin: 0;
+            cursor: pointer;
+        }
+
+        .year {
+            font-size:2.2vw;
+            text-transform: none;
+        }
+
+        .yearx {
+            font-family: 'Helvetica Neue';
+            font-size:1.4vw;
+            line-height: 0.2vw;
+            text-transform: none;
+            /* color: #e2231c; */
+        }
+
+        .menu-wrapper {
+            
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height:12px;
+            width: 30px;
+            cursor: pointer;
+            z-index: 100;
+            
+        }
+
+        .upper {
+            display: block;
+            height:2px;
+            width: 100%;
+            background: #000000
+        }
+
+        .lower {
+            display: block;
+            height:2px;
+            width: 100%;
+            background: #000000
+        }
+
+        .text-wrapper {
+            mix-blend-mode: difference;
+        }
+
+        .text-container {
+            height:auto;
+            width: auto;
+            overflow: hidden;
+        }
+
+        .left-side {
+            width: 35%;
+        }
+
+        .right-side {
+            width: 55%;
+        }
+
+        .right-end {
+            width: 10%;
+        }
+
+        
+
+        .gallery {
+            background-image: url("A14474.webp");
+            background-repeat: no-repeat;
+            color: #fff;  
+            background-size: cover;
+        }
+
+/*         .small-gallery {
+            background-image: url("A14474.webp");
+            background-repeat: no-repeat;
+            color: #fff;  
+            background-size: cover;
+            opacity: 0;
+        } */
+
+        .fl {
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+            height: 40%;
+            width: 100%;
+            font-size: 20vw;
+            color: #f4f4f4;
+        }
+
+        .sect-b-left {
+            height: 100%;
+            width: 20%;
+            display: flex;
+            align-items: center;
+        }
+
+        .sect-b-right  {
+            display: flex;
+            align-items: center;
+            height: 100%;
+            width: 80%;
+        }
+
+        .desc {
+            font-size: 2.4vw;
+            padding:0;
+            margin:0;
+            writing-mode: vertical-rl;
+            text-align: center;
+            transform:rotate(180deg);
+            color: black;
+        }
+
+        .desc-text {
+            font-family: 'Helvetica Neue';
+            text-align: justify;
+            font-size: 1.05vw;
+            padding:0;
+            margin:0;
+            color: black;
+        }
+
+
+
+        
+
+
+
+
+
+
+
+
+    
+
+    </style>
+</head>
+<body>
+    <div class="menu">
+        <div class="menu-a"></div>
+        <div class="menu-b">
+            <div class="text-container"><p class="menu-links"><span class="year">l&nbsp;&nbsp;</span>Artists</p></div>
+            <div class="text-container"><p class="menu-links"><span class="year">ll&nbsp;&nbsp;</span>Paintings</p></div>
+            <div class="text-container"><p class="menu-links"><span class="year">lll&nbsp;&nbsp;</span>About</p></div>
+            <div class="text-container"><p class="menu-links"><span class="year">lV&nbsp;&nbsp;</span>Gallery</p></div>   
+        </div>
+        <div class="menu-c">
+
+                
+        </div>
+    </div>
+    <main class="main">
+        <div class="nav-bar">
+            <div class="nav-wrapper">
+                <svg height="30" viewBox="0 0 51 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g filter="url(#filter0_d_124_86)">
+                    <path d="M26.5 1C26.5 0.447715 26.0523 0 25.5 0C24.9477 0 24.5 0.447715 24.5 1L26.5 1ZM24.5 1L24.5 52H26.5L26.5 1L24.5 1Z" fill="black"/>
+                    </g>
+                    <line x1="43.7903" y1="10.4139" x2="8.41444" y2="44.3189" stroke="black" stroke-width="2" stroke-linecap="round"/>
+                    <line x1="42.6483" y1="45.0625" x2="8.00005" y2="10.4143" stroke="black" stroke-width="2" stroke-linecap="round"/>
+                    <line x1="1" y1="28" x2="50" y2="28" stroke="black" stroke-width="2" stroke-linecap="round"/>
+                    <defs>
+                    <filter id="filter0_d_124_86" x="20.5" y="0" width="10" height="60" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                    <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                    <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                    <feOffset dy="4"/>
+                    <feGaussianBlur stdDeviation="2"/>
+                    <feComposite in2="hardAlpha" operator="out"/>
+                    <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+                    <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_124_86"/>
+                    <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_124_86" result="shape"/>
+                    </filter>
+                    </defs>
+                    </svg>
+                    <div class="text-wrapper">Gallery</div> 
+                    <div onclick="menu()" style="margin-right: 20px;" class="menu-wrapper">
+                        <span class="upper"></span>
+                        <span class="lower"></span>
+                      </div>
+            </div>
+        </div>
+        <div class="wrapper">
+            <div class="section left-side">
+                <div class="subgroup-a">
+                    
+                </div>
+                <div class="subgroup-b">
+                    <div class="sect-a small-gallery">
+                        <p>The <br> Kitchen <br> Maid <br> <span class="yearx"></span></p>
+                    </div>
+                    <div class="sect-b">
+                        4
+                    </div>
+                </div>
+            </div>
+            <div class="section right-side">
+                <div class="subgroup-a">
+                    
+                </div>
+                <div class="subgroup-b" style="border: none;">
+                    <div class="sect-a gallery">
+                       
+                        
+                    </div>
+                    <div class="sect-b fl">
+                        <div class="sect-b-left">
+                            <p class="desc">Description</p>
+                        </div>
+                        <div class="sect-b-right">
+                            <p class="desc-text">Renaissance art (1350 – 1620 AD[1]) is the painting, sculpture, and decorative arts of the period of European history known as the Renaissance, which emerged as a distinct style in Italy in about AD 1400, in parallel with developments which occurred in philosophy, literature, music, science, and technology. Renaissance art took as its foundation the art of Classical antiquity, perceived as the noblest of ancient traditions, but transformed that tradition by absorbing recent developments in the art of Northern Europe and by applying contemporary scientific knowledge. </p>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+
+            <div class="section right-end" style="border-right: none">
+                <div class="subgroup-a">
+                    
+                </div>
+                <div class="subgroup-b" style="border: none;">
+                    <div class="sect-a">
+                       
+                        
+                    </div>
+
+                </div>
+            </div>
+
+            
+    
+        </div>
+
+    </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script>
+    var tl = gsap.timeline();
+
+   
+   
+    tl.to(".upper", {
+        y: 10,
+        }
+	);
+    tl.to(".lower", {
+        rotate: 45,
+        background: 'white',
+        ease: "Power4. easeOut",
+        }, 'start'
+	);
+    tl.to(".upper", {
+        rotate: -45,
+        background: 'white',
+        ease: "Power4. easeOut",
+    }, 'start'
+	);
+
+ 
+
+
+
+
+   
+    tl.to(".menu", {
+        zIndex: 1,
+        opacity: 1,
+        duration: 0.4,
+
+        ease: "Power4. easeOut",
+    }, 'start'
+	);
+
+
+
+    tl.from(".menu-links", {
+       yPercent: 100,
+       stagger: 0.1,
+       opacity: 0,
+        duration: 0.4,
+  
+    },);
+
+
+
+
+        
+        tl.reverse();
+    
+
+
+    function menu() {
+        tl.reversed(!tl.reversed());
+       
+    }
+
+   
+
+
+    </script>
+</body>
+</html>
