@@ -1,3 +1,3 @@
 # rembrant
 
-![Alt Text](https://media.giphy.com/media/vFKqnCdLPNOKc/giphy.gif)
+![Alt Text](https://github.com/Liam-hi/rembrant/blob/master/demo.gif?raw=true)
